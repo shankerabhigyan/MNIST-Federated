@@ -8,8 +8,8 @@ import numpy as np
 
 # AUxillary methods
 def getDist(y):
-    ax = sns.countplot(y)
-    ax.set(title="Count of data classes")
+    sns.countplot(x=y)
+    plt.title("Count of data classes")
     plt.show()
 
 def getData(dist, x, y):

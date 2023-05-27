@@ -8,8 +8,8 @@ import numpy as np
 
 # AUxillary methods
 def getDist(y):
-    ax = sns.countplot(y)
-    ax.set(title="Count of data classes")
+    sns.countplot(x=y)
+    plt.title("Count of data classes")
     plt.show()
 
 def getData(dist, x, y):
@@ -60,7 +60,7 @@ class FlowerClient(fl.client.NumPyClient):
 
 # Start Flower client
 fl.client.start_numpy_client(
-        server_address="localhost:"+str(sys.argv[1]), 
+        server_address="localhost:"+str(sys.argv[1]),
         client=FlowerClient(), 
         grpc_max_message_length = 1024*1024*1024
 )
